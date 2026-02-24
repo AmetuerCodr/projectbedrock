@@ -1,3 +1,15 @@
+<script lang="ts" >
+	import { derived } from "svelte/store";
+
+    let count = $state(0);
+    
+   const increaseCount = () => {
+      count++
+    }
+
+</script>
+
 <h1>Welcome to your library project</h1>
 <p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
 <p class="text-green-400 bg-slate-900" >Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<button onclick={increaseCount} >{count}</button>
